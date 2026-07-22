@@ -1,0 +1,22 @@
+Deez Vinyl 4.1 — Static review results
+
+Passed:
+- JavaScript syntax checks for main/preload/renderer.
+- IPC method names match between preload, main and renderer.
+- Play, Pause, Next, Previous, Seek, Volume, Device list and Device transfer are wired to Spotify Web API endpoints.
+- Persistent Retry-After cooldown is present.
+- Polling is limited to 15 seconds while playing and 30 seconds otherwise.
+- Progress and vinyl animation advance locally without API polling.
+
+Fixed during review:
+- Replaced unsupported CSS angle multiplication for the tonearm with JavaScript-calculated rotation.
+- Added one automatic token refresh/retry after HTTP 401.
+- Added a clear error if OAuth callback port 43821 cannot be opened.
+- Next/Previous no longer incorrectly force the UI into Playing state.
+- No-track state now resets local progress and tonearm position.
+
+Not verifiable in this environment:
+- Real Spotify authentication and account permissions.
+- Actual audio playback and device transfer on the user's Windows PC.
+- Spotify server responses after the current rate-limit expires.
+- Windows installer execution.

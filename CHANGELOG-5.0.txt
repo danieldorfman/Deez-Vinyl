@@ -1,0 +1,11 @@
+Deez Vinyl 5.0
+- Like/Unlike
+- Shuffle
+- Repeat context/track/off
+- Animated Deez Cat
+- Mini mode
+- Windows startup
+- Smooth artwork/color transitions
+- Long-title marquee
+- Improved vinyl highlights
+- Persistent pin/mini settings
