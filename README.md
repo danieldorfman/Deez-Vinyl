@@ -1,5 +1,5 @@
 # Deez Vinyl
-
+![Deez Vinyl Preview](preview.png)
 A modern desktop Spotify player inspired by the warmth of vinyl records.
 
 Deez Vinyl is a lightweight Electron application that turns Spotify playback into an immersive vinyl-inspired desktop experience, with animated artwork, dynamic backgrounds, and direct playback controls.
@@ -17,6 +17,10 @@ Deez Vinyl is a lightweight Electron application that turns Spotify playback int
 - Mini mode and always-on-top mode
 - Optional Windows startup
 - Windows installer and portable build scripts
+
+## Download
+
+[Download the latest Windows installer](https://github.com/danieldorfman/Deez-Vinyl/releases/latest)
 
 ## Requirements
 
