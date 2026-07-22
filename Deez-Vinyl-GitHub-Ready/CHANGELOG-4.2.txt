@@ -1,5 +1,0 @@
-Deez Vinyl 4.2
-- Added serialized command queue.
-- Added local idle animation with zero API traffic.
-- Preserved persistent rate-limit cooldown and adaptive polling.
-- Preserved dynamic artwork colors, vinyl rotation and tonearm progress.
