@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Deez Vinyl X</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app" class="app">
+  <header class="titlebar">
+    <div class="brand">DEEZ VINYL <small>X</small></div>
+    <div class="window-buttons">
+      <button id="miniBtn" title="מצב מיני" aria-label="מצב מיני"><span class="icon-mini"></span></button>
+      <button id="settingsBtn" title="הגדרות" aria-label="הגדרות"><span class="icon-gear">⚙</span></button>
+      <button id="pinBtn" title="הצמד מעל חלונות" aria-label="הצמד"><span class="icon-pin">◆</span></button>
+      <button id="minBtn" title="מזער" aria-label="מזער">—</button>
+      <button id="closeBtn" title="סגור" aria-label="סגור">×</button>
+    </div>
+  </header>
+
+  <section id="setup" class="setup hidden">
+    <h1>חיבור ל־Spotify</h1>
+    <p>הדבק את ה־Client ID מאפליקציית Spotify Developer שלך.</p>
+    <input id="clientId" dir="ltr" placeholder="Spotify Client ID">
+    <div class="redirect">Redirect URI:<br><code id="redirectUri"></code></div>
+    <button id="connectBtn" class="primary">התחבר ל־Spotify</button>
+    <p id="setupStatus" class="status"></p>
+  </section>
+
+  <section id="player" class="player hidden">
+    <div class="deck">
+      <div id="glow" class="glow"></div>
+      <div id="vinyl" class="vinyl paused">
+        <img id="cover" alt="עטיפת אלבום">
+        <div class="grooves"></div>
+        <div class="label-hole"></div>
+        <div class="shine"></div>
+      </div>
+      <div id="tonearm" class="tonearm paused">
+        <div class="arm"></div><div class="needle"></div>
+      </div>
+    </div>
+
+    <div class="meta">
+      <div class="marquee"><h2 id="track">אין שיר פעיל</h2></div>
+      <div class="marquee"><p id="artist">פתח את Spotify והפעל שיר</p></div>
+    </div>
+
+    <div class="progress-row">
+      <span id="current">0:00</span>
+      <input id="progress" type="range" min="0" max="1000" value="0">
+      <span id="duration">0:00</span>
+    </div>
+
+    <div class="secondary-controls">
+      <button id="shuffleBtn" title="Shuffle" aria-label="Shuffle">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h3.3c3.9 0 5.1 10 9 10H21m-4-4 4 4-4 4M3 17h3.3c1.8 0 3-2.2 4.2-4.6M15.3 7H21m-4-4 4 4-4 4"/></svg>
+      </button>
+      <button id="likeBtn" title="שמור שיר" aria-label="שמור שיר" class="heart-btn">♡</button>
+      <button id="repeatBtn" title="Repeat" aria-label="Repeat">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 2l4 4-4 4M21 6H8a5 5 0 0 0-5 5m4 11-4-4 4-4M3 18h13a5 5 0 0 0 5-5"/><text id="repeatOne" x="12" y="15" text-anchor="middle">1</text></svg>
+      </button>
+    </div>
+
+    <div class="controls">
+      <button id="prevBtn" class="control" aria-label="הקודם"><span class="prev-icon"></span></button>
+      <button id="playBtn" class="play" aria-label="נגן">▶</button>
+      <button id="nextBtn" class="control" aria-label="הבא"><span class="next-icon"></span></button>
+    </div>
+
+    <div class="volume-row">
+      <span class="speaker" aria-hidden="true">🔊</span>
+      <input id="volume" type="range" min="0" max="100" value="50">
+      <span id="volumeValue" class="volume-value">50%</span>
+      <button id="disconnectBtn" class="text-btn">התנתק</button>
+    </div>
+
+    <div class="device-row">
+      <select id="deviceSelect"></select>
+      <button id="refreshDevicesBtn" class="small-btn">רענן</button>
+      <button id="useDeviceBtn" class="small-btn primary-small">נגן כאן</button>
+    </div>
+    <p id="error" class="status"></p>
+  </section>
+
+  <section id="settingsPanel" class="settings-panel hidden">
+    <div class="settings-card">
+      <div class="settings-heading"><h3>הגדרות</h3><button id="closeSettingsBtn" class="close-settings">×</button></div>
+      <label>מהירות סיבוב<input id="rotationSpeed" type="range" min="3" max="20" value="8"></label>
+      <label class="toggle-row"><span>זוהר דינמי</span><input id="glowToggle" type="checkbox" checked></label>
+      <label class="toggle-row"><span>מצב קומפקטי</span><input id="compactToggle" type="checkbox"></label>
+      <label class="toggle-row"><span>הפעלה עם Windows</span><input id="startupToggle" type="checkbox"></label>
+      <div class="settings-actions">
+        <button id="openLogsBtn" class="small-btn">פתח לוגים</button>
+        <button id="clearLogsBtn" class="small-btn">נקה לוגים</button>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="renderer.js"></script>
+</body>
+</html>
