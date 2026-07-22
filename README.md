@@ -1,5 +1,6 @@
 # Deez Vinyl
-<img width="343" height="584" alt="צילום מסך 2026-07-22 041616" src="https://github.com/user-attachments/assets/8b5d5c31-66c6-4495-9fa9-07bb3f91b85a" />
+<img width="343" height="584" alt="preview" src="https://github.com/user-attachments/assets/7b5fff29-acae-44e7-9ce8-22eda106d1fe" />
+
 
 A modern desktop Spotify player inspired by the warmth of vinyl records.
 
